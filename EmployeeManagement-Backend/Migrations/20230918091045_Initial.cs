@@ -267,7 +267,7 @@ namespace EmployeeManagement_Backend.Migrations
             migrationBuilder.InsertData(
                 table: "Account",
                 columns: new[] { "Id", "Address", "CompanyId", "Email", "FullName", "IsActive", "Password", "RoleId", "UserName" },
-                values: new object[] { "00000000-0000-0000-0000-000000000000", "Bekasi", null, "superadmin@email.com", "Super Admin", true, "$2a$11$vRuGfcDB.4zEp.rpYGE3TumF3SUs3mzIXAlDRYwyEYyQ/yqzCCczm", "1", "SuperAdmin" });
+                values: new object[] { "0d559e48-d19c-405d-b0dd-fdd8a46d0a8a", "Bekasi", null, "superadmin@email.com", "Super Admin", true, "$2a$11$vRuGfcDB.4zEp.rpYGE3TumF3SUs3mzIXAlDRYwyEYyQ/yqzCCczm", "1", "SuperAdmin" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Account_CompanyId",
