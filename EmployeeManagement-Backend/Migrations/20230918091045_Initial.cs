@@ -218,7 +218,7 @@ namespace EmployeeManagement_Backend.Migrations
                 {
                     Id = table.Column<string>(type: "varchar(50)", nullable: false),
                     AccountId = table.Column<string>(type: "varchar(50)", nullable: false),
-                    LastLogin = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
+                    LastLogin = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
                 },
                 constraints: table =>
                 {

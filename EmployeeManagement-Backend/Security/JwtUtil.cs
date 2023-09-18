@@ -29,7 +29,6 @@ public class JwtUtil : IJwtUtil
             SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256),
             Subject = new ClaimsIdentity(new List<Claim>
             {
-                new Claim(ClaimTypes.Email, account.Email),
                 new Claim(ClaimTypes.Role, account.Role.Name),
                 new Claim("UserId", account.Id),
                 new Claim("UserName", account.UserName),

@@ -77,7 +77,6 @@ public class AuthService : IAuthService
 
         var account = new Account
         {
-            Id = Guid.NewGuid().ToString(),
             FullName = createAccount.FullName,
             UserName = createAccount.UserName,
             Email = createAccount.Email,
@@ -119,6 +118,9 @@ public class AuthService : IAuthService
         bool isValid = BCrypt.Net.BCrypt.Verify(loginRequestDto.Password, findAccount.Password);
         if (!isValid) throw new UnauthorizedException("Invalid username  or password");
 
+        if (!findAccount.IsActive)
+            throw new UnauthorizedException("Akun anda di non-aktifkan, hubungi owner atau admin");
+        
         var jwt = _jwtUtil.GenerateToken(findAccount);
 
         var loginHistory = await _loginHistoryRepository.Find(l => l.AccountId.Equals(findAccount.Id));
@@ -126,7 +128,6 @@ public class AuthService : IAuthService
         {
             var loginHis = new LoginHistory
             {
-                Id = Guid.NewGuid().ToString(),
                 AccountId = findAccount.Id,
                 LastLogin = DateTime.Now
             };
@@ -148,6 +149,7 @@ public class AuthService : IAuthService
             _persistence.SaveChanges();
         }
         
+        Console.WriteLine("Test" + loginHistory.LastLogin);
         return new LoginResponseDto
         {
             Username = findAccount.UserName,
