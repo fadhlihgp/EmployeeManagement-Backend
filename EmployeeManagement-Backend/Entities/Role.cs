@@ -6,10 +6,10 @@ namespace EmployeeManagement_Backend.Entities;
 [Table("Role")]
 public class Role
 {
-    [Key]
+    [Key, Column(TypeName = "varchar(50)")]
     public String Id { get; set; } = string.Empty;
     
-    [Column(TypeName = "Varchar(255)")]
+    [Column(TypeName = "Varchar(50)")]
     public String Name { get; set; } = string.Empty;
     
     public virtual ICollection<Account>? Accounts { get; set; }

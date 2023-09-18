@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "R0G6tMb1TJNrZ/mQNpwPjH88oRNcXOyRxaGgYPaFOyPjI2j24uc8lj2ldzQSZ30NP5LEO5dJAR6qftYTinV/yQ==",
+  "dgSpecHash": "kIS5CBUcfnySMfY0vRtMGLXBFJkwXKcVKQj1dXN3qRgrtaZeo6hCHhsVLANTMoIzwvAjNroFCYhRhUTTSx2udg==",
   "success": true,
   "projectFilePath": "C:\\Fadhlih\\Private\\Project\\EmployeeManagement-Fullstack\\EmployeeManagement-Backend\\EmployeeManagement-Backend\\EmployeeManagement-Backend.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.5\\microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.11\\microsoft.entityframeworkcore.7.0.11.nupkg.sha512",

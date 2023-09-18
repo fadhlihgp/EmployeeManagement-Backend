@@ -7,13 +7,16 @@ namespace EmployeeManagement_Backend.Entities;
 [Table("Company")]
 public class Company
 {
-    [Key]
+    [Key, Column(TypeName = "Varchar(50)")]
     public string Id { get; set; } = new Guid().ToString();
     
+    [Column(TypeName = "varchar(255)")]
     public string Name { get; set; } = string.Empty;
     
+    [Required, EmailAddress]
     public string Email { get; set; } = string.Empty;
     
+    [Column(TypeName = "varchar(50)")]
     public string PhoneNumber { get; set; } = string.Empty;
     
     [Column(TypeName = "Text")]

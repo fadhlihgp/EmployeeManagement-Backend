@@ -59,7 +59,7 @@ public class AppDbContext : DbContext
             new Account
             {
                 Id = new Guid().ToString(), FullName = "Super Admin", Email = "superadmin@email.com",
-                UserName = "SuperAdmin", Address = "Bekasi", Password = "", RoleId = "1" 
+                UserName = "SuperAdmin", Address = "Bekasi", Password = "$2a$11$vRuGfcDB.4zEp.rpYGE3TumF3SUs3mzIXAlDRYwyEYyQ/yqzCCczm", RoleId = "1" 
             });
 
         modelBuilder.Entity<ProjectStatus>().HasData(

@@ -6,12 +6,15 @@ namespace EmployeeManagement_Backend.Entities;
 [Table("Project")]
 public class Project
 {
-    [Key] public string Id { get; set; } = new Guid().ToString();
+    [Key, Column(TypeName = "varchar(50)")] public string Id { get; set; } = new Guid().ToString();
     
+    [Column(TypeName = "varchar(50)")]
     public string ProjectCode { get; set; } = string.Empty;
     
+    [Column(TypeName = "varchar(50)")]
     public string ProjectName { get; set; } = string.Empty;
 
+    [Column(TypeName = "varchar(50)")]
     public string? ClientName { get; set; } = string.Empty;
     
     public string? Description { get; set; }
@@ -22,9 +25,11 @@ public class Project
     
     public int LongDay { get; set; }
     
+    [Column(TypeName = "varchar(50)")]
     public string CompanyId { get; set; }
     public virtual Company Company { get; set; }
     
+    [Column(TypeName = "varchar(50)")]
     public string ProjectStatusId { get; set; }
     public virtual ProjectStatus ProjectStatus { get; set; }
     
