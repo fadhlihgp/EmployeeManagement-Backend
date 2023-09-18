@@ -133,7 +133,8 @@ namespace EmployeeManagement_Backend.Migrations
                     UserName = table.Column<string>(type: "varchar(50)", nullable: false),
                     Email = table.Column<string>(type: "text", nullable: false),
                     Password = table.Column<string>(type: "text", maxLength: 2147483647, nullable: false),
-                    Address = table.Column<string>(type: "text", nullable: false),
+                    Address = table.Column<string>(type: "text", nullable: true),
+                    IsActive = table.Column<bool>(type: "boolean", nullable: false),
                     RoleId = table.Column<string>(type: "varchar(50)", nullable: false),
                     CompanyId = table.Column<string>(type: "varchar(50)", nullable: true)
                 },
@@ -265,8 +266,8 @@ namespace EmployeeManagement_Backend.Migrations
 
             migrationBuilder.InsertData(
                 table: "Account",
-                columns: new[] { "Id", "Address", "CompanyId", "Email", "FullName", "Password", "RoleId", "UserName" },
-                values: new object[] { "00000000-0000-0000-0000-000000000000", "Bekasi", null, "superadmin@email.com", "Super Admin", "$2a$11$vRuGfcDB.4zEp.rpYGE3TumF3SUs3mzIXAlDRYwyEYyQ/yqzCCczm", "1", "SuperAdmin" });
+                columns: new[] { "Id", "Address", "CompanyId", "Email", "FullName", "IsActive", "Password", "RoleId", "UserName" },
+                values: new object[] { "00000000-0000-0000-0000-000000000000", "Bekasi", null, "superadmin@email.com", "Super Admin", true, "$2a$11$vRuGfcDB.4zEp.rpYGE3TumF3SUs3mzIXAlDRYwyEYyQ/yqzCCczm", "1", "SuperAdmin" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Account_CompanyId",

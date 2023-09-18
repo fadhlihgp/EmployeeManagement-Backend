@@ -7,7 +7,7 @@ namespace EmployeeManagement_Backend.Entities;
 public class Account
 {
     [Key, Column(TypeName = "Varchar(50)")]
-    public string Id { get; set; } = new Guid().ToString();
+    public string Id { get; set; } = Guid.NewGuid().ToString();
     
     [Column(TypeName = "varchar(255)")]
     public string FullName { get; set; } = string.Empty;
@@ -21,8 +21,9 @@ public class Account
     [Required, StringLength(maximumLength:int.MaxValue, MinimumLength = 8)]
     public string Password { get; set; } = string.Empty;
     
-    public string Address { get; set; } = string.Empty;
+    public string? Address { get; set; }
     
+    public bool IsActive { get; set; } = true;
     
     [Column(TypeName = "varchar(50)")]
     public string RoleId { get; set; } = string.Empty;
@@ -31,4 +32,5 @@ public class Account
     [Column(TypeName = "varchar(50)")]
     public string? CompanyId { get; set; }
     public virtual Company? Company { get; set; }
+    public virtual LoginHistory? LoginHistory { get; set; }
 }

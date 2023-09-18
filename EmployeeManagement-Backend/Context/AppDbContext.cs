@@ -22,7 +22,9 @@ public class AppDbContext : DbContext
 
     public AppDbContext(DbContextOptions options) : base(options)
     {
-    }
+		AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+		AppContext.SetSwitch("Npgsql.DisableDateTimeInfinityConversions", true);
+	}
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -58,7 +60,7 @@ public class AppDbContext : DbContext
         modelBuilder.Entity<Account>().HasData(
             new Account
             {
-                Id = new Guid().ToString(), FullName = "Super Admin", Email = "superadmin@email.com",
+                Id = Guid.NewGuid().ToString(), FullName = "Super Admin", Email = "superadmin@email.com",
                 UserName = "SuperAdmin", Address = "Bekasi", Password = "$2a$11$vRuGfcDB.4zEp.rpYGE3TumF3SUs3mzIXAlDRYwyEYyQ/yqzCCczm", RoleId = "1" 
             });
 

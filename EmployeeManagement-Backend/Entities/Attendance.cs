@@ -6,7 +6,7 @@ namespace EmployeeManagement_Backend.Entities;
 [Table("Attendance")]
 public class Attendance
 {
-    [Key, Column(TypeName = "Varchar(50)")] public string Id { get; set; } = new Guid().ToString();
+    [Key, Column(TypeName = "Varchar(50)")] public string Id { get; set; } = Guid.NewGuid().ToString();
     
     [Column(TypeName = "varchar(50)")]
     public string EmployeeId { get; set; } = string.Empty;

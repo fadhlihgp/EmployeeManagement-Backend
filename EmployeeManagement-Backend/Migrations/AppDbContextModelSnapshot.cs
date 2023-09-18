@@ -28,7 +28,6 @@ namespace EmployeeManagement_Backend.Migrations
                         .HasColumnType("Varchar(50)");
 
                     b.Property<string>("Address")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("CompanyId")
@@ -41,6 +40,9 @@ namespace EmployeeManagement_Backend.Migrations
                     b.Property<string>("FullName")
                         .IsRequired()
                         .HasColumnType("varchar(255)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
 
                     b.Property<string>("Password")
                         .IsRequired()
@@ -76,7 +78,8 @@ namespace EmployeeManagement_Backend.Migrations
                             Address = "Bekasi",
                             Email = "superadmin@email.com",
                             FullName = "Super Admin",
-                            Password = "test1234",
+                            IsActive = true,
+                            Password = "$2a$11$vRuGfcDB.4zEp.rpYGE3TumF3SUs3mzIXAlDRYwyEYyQ/yqzCCczm",
                             RoleId = "1",
                             UserName = "SuperAdmin"
                         });

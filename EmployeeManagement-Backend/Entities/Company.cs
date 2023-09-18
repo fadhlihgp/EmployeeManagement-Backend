@@ -8,7 +8,7 @@ namespace EmployeeManagement_Backend.Entities;
 public class Company
 {
     [Key, Column(TypeName = "Varchar(50)")]
-    public string Id { get; set; } = new Guid().ToString();
+    public string Id { get; set; } = Guid.NewGuid().ToString();
     
     [Column(TypeName = "varchar(255)")]
     public string Name { get; set; } = string.Empty;

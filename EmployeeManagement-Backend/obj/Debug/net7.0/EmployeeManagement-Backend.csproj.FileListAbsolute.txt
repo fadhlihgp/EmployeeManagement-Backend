@@ -42,3 +42,10 @@ C:\Fadhlih\Private\Project\EmployeeManagement-Fullstack\EmployeeManagement-Backe
 C:\Fadhlih\Private\Project\EmployeeManagement-Fullstack\EmployeeManagement-Backend\EmployeeManagement-Backend\obj\Debug\net7.0\EmployeeManagement-Backend.genruntimeconfig.cache
 C:\Fadhlih\Private\Project\EmployeeManagement-Fullstack\EmployeeManagement-Backend\EmployeeManagement-Backend\obj\Debug\net7.0\ref\EmployeeManagement-Backend.dll
 C:\Fadhlih\Private\Project\EmployeeManagement-Fullstack\EmployeeManagement-Backend\EmployeeManagement-Backend\bin\Debug\net7.0\BCrypt.Net-Next.dll
+C:\Fadhlih\Private\Project\EmployeeManagement-Fullstack\EmployeeManagement-Backend\EmployeeManagement-Backend\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Fadhlih\Private\Project\EmployeeManagement-Fullstack\EmployeeManagement-Backend\EmployeeManagement-Backend\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Fadhlih\Private\Project\EmployeeManagement-Fullstack\EmployeeManagement-Backend\EmployeeManagement-Backend\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Fadhlih\Private\Project\EmployeeManagement-Fullstack\EmployeeManagement-Backend\EmployeeManagement-Backend\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Fadhlih\Private\Project\EmployeeManagement-Fullstack\EmployeeManagement-Backend\EmployeeManagement-Backend\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Fadhlih\Private\Project\EmployeeManagement-Fullstack\EmployeeManagement-Backend\EmployeeManagement-Backend\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Fadhlih\Private\Project\EmployeeManagement-Fullstack\EmployeeManagement-Backend\EmployeeManagement-Backend\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll

@@ -6,7 +6,7 @@ namespace EmployeeManagement_Backend.Entities;
 [Table("TR_Employee_Project")]
 public class TR_EmployeeProject
 {
-    [Key, Column(TypeName = "varchar(50)")] public string Id { get; set; } = new Guid().ToString();
+    [Key, Column(TypeName = "varchar(50)")] public string Id { get; set; } = Guid.NewGuid().ToString();
     
     [Column(TypeName = "varchar(50)")]
     public string ProjectId { get; set; } = string.Empty;
