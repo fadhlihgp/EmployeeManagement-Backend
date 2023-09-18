@@ -1,5 +1,6 @@
 using System.Text;
 using EmployeeManagement_Backend.Context;
+using EmployeeManagement_Backend.Helpers;
 using EmployeeManagement_Backend.Middleware;
 using EmployeeManagement_Backend.Repositories;
 using EmployeeManagement_Backend.Security;
@@ -52,14 +53,16 @@ builder.Services.AddDbContext<AppDbContext>(optionsBuilder =>
 });
 
 #region ================ Dependencies ================
-builder.Services.AddTransient<IPersistence, Persistence>();
 builder.Services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
+builder.Services.AddTransient<IPersistence, Persistence>();
 builder.Services.AddTransient<IJwtUtil, JwtUtil>();
 builder.Services.AddTransient<IAuthService, AuthService>();
+builder.Services.AddTransient<ILoginHistoryService, LoginHistoryService>();
 #endregion
 
 // Middleware
 builder.Services.AddScoped<ExceptionHandlingMiddleware>();
+
 // JWT Authentication
 builder.Services.AddAuthentication(options =>
 {
@@ -78,6 +81,15 @@ builder.Services.AddAuthentication(options =>
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:Key"]))
     };
 });
+
+#region ============== Data Properties =============================
+DataProperties.SuccessUpdateMessage = builder.Configuration["GlobalMessages:SuccessUpdateMessage"];
+DataProperties.SuccessCreateMessage = builder.Configuration["GlobalMessages:SuccessCreateMessage"];
+DataProperties.SuccessDeleteMessage = builder.Configuration["GlobalMessages:SuccessDeleteMessage"];
+DataProperties.SuccessGetMessage = builder.Configuration["GlobalMessages:SuccessGetMessage"];
+DataProperties.UnauthorizedMessage = builder.Configuration["GlobalMessages:UnauthorizedFailure"];
+DataProperties.NotFoundMessage = builder.Configuration["GlobalMessages:NotFoundFailure"];
+#endregion
 
 var app = builder.Build();
 
