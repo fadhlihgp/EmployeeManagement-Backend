@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace EmployeeManagement_Backend.Controllers;
 
 [ApiController]
-[Route("api/employee")]
+[Route("api/company")]
 [Authorize]
 public class CompanyController : ControllerBase
 {

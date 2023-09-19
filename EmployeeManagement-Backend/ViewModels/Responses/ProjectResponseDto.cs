@@ -11,4 +11,5 @@ public class ProjectResponseDto
     public DateTime EndDate { get; set; }
     public int LongDay { get; set; }
     public string ProjectStatusId { get; set; }
+    public string ProjectStatusName { get; set; }
 }

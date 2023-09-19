@@ -9,4 +9,5 @@ public interface IEmployeeService
     Task<IEnumerable<EmployeeResponseDto>> ListEmployee(string companyId);
     Task<EmployeeResponseDto> GetEmployeeById(string employeeId);
     Task UpdateEmployee(string employeeId, EmployeeCreateRequestDto employeeCreateRequestDto);
+    Task DeleteEmployee(string employeeId);
 }
