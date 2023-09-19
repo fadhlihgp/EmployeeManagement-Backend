@@ -59,6 +59,7 @@ builder.Services.AddTransient<IJwtUtil, JwtUtil>();
 builder.Services.AddTransient<IAuthService, AuthService>();
 builder.Services.AddTransient<ILoginHistoryService, LoginHistoryService>();
 builder.Services.AddTransient<IAccountService, AccountService>();
+builder.Services.AddTransient<ICompanyService, CompanyService>();
 #endregion
 
 // Middleware
