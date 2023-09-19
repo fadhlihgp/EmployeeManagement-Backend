@@ -30,7 +30,7 @@ public class JwtUtil : IJwtUtil
             Subject = new ClaimsIdentity(new List<Claim>
             {
                 new Claim(ClaimTypes.Role, account.Role.Name),
-                new Claim("UserId", account.Id),
+                new Claim("AccountId", account.Id),
                 new Claim("UserName", account.UserName),
                 new Claim("RoleId", account.RoleId),
                 new Claim("CompanyId", account.CompanyId ?? "xxx"),

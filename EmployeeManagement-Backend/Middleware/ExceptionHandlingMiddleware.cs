@@ -29,6 +29,11 @@ public class ExceptionHandlingMiddleware : IMiddleware
             await HandleExceptionAsync(context, e);
             _logger.LogError(e.Message);
         }
+        catch (BadRequestException e)
+        {
+            await HandleExceptionAsync(context, e);
+            _logger.LogError(e.Message);
+        }
         catch (Exception e)
         {
             await HandleExceptionAsync(context, e);
@@ -53,6 +58,11 @@ public class ExceptionHandlingMiddleware : IMiddleware
             case UnauthorizedException:
                 context.Response.StatusCode = (int)HttpStatusCode.Unauthorized;
                 errorResponse.StatusCode = (int)HttpStatusCode.Unauthorized;
+                errorResponse.Message = exception.Message;
+                break;
+            case BadRequestException:
+                context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+                errorResponse.StatusCode = (int)HttpStatusCode.BadRequest;
                 errorResponse.Message = exception.Message;
                 break;
             case not null:

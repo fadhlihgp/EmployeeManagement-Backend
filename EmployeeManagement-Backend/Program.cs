@@ -58,6 +58,7 @@ builder.Services.AddTransient<IPersistence, Persistence>();
 builder.Services.AddTransient<IJwtUtil, JwtUtil>();
 builder.Services.AddTransient<IAuthService, AuthService>();
 builder.Services.AddTransient<ILoginHistoryService, LoginHistoryService>();
+builder.Services.AddTransient<IAccountService, AccountService>();
 #endregion
 
 // Middleware
@@ -92,6 +93,11 @@ DataProperties.NotFoundMessage = builder.Configuration["GlobalMessages:NotFoundF
 #endregion
 
 var app = builder.Build();
+
+app.UseCors(policyBuilder =>
+    policyBuilder.AllowAnyHeader()
+        .SetIsOriginAllowed(origin => true)
+        .AllowCredentials());
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

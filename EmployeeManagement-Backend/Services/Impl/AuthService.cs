@@ -116,7 +116,7 @@ public class AuthService : IAuthService
         if (findAccount == null) throw new UnauthorizedException("Invalid username or password");
         
         bool isValid = BCrypt.Net.BCrypt.Verify(loginRequestDto.Password, findAccount.Password);
-        if (!isValid) throw new UnauthorizedException("Invalid username  or password");
+        if (!isValid) throw new UnauthorizedException("Invalid username or password");
 
         if (!findAccount.IsActive)
             throw new UnauthorizedException("Akun anda di non-aktifkan, hubungi owner atau admin");
