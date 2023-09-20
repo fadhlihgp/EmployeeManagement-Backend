@@ -21,7 +21,7 @@ public class Employee
     
     public DateTime BirthDate { get; set; }
     
-    [Column(TypeName = "varchar(50)")]
+    [Column(TypeName = "varchar(255)")]
     public string? ImageUrl { get; set; }
     
     public bool IsDeleted { get; set; } = false;

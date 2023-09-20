@@ -213,7 +213,7 @@ namespace EmployeeManagement_Backend.Migrations
                         .HasColumnType("varchar(50)");
 
                     b.Property<string>("ImageUrl")
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("varchar(255)");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("boolean");

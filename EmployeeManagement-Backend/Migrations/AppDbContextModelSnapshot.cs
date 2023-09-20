@@ -74,7 +74,7 @@ namespace EmployeeManagement_Backend.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "00000000-0000-0000-0000-000000000000",
+                            Id = "0d559e48-d19c-405d-b0dd-fdd8a46d0a8a",
                             Address = "Bekasi",
                             Email = "superadmin@email.com",
                             FullName = "Super Admin",
@@ -210,7 +210,7 @@ namespace EmployeeManagement_Backend.Migrations
                         .HasColumnType("varchar(50)");
 
                     b.Property<string>("ImageUrl")
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("varchar(255)");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("boolean");

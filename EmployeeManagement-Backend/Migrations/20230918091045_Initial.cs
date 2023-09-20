@@ -74,7 +74,7 @@ namespace EmployeeManagement_Backend.Migrations
                     Address = table.Column<string>(type: "text", nullable: false),
                     PhoneNumber = table.Column<string>(type: "varchar(50)", nullable: false),
                     BirthDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    ImageUrl = table.Column<string>(type: "varchar(50)", nullable: true),
+                    ImageUrl = table.Column<string>(type: "varchar(255)", nullable: true),
                     IsDeleted = table.Column<bool>(type: "boolean", nullable: false),
                     IsActive = table.Column<bool>(type: "boolean", nullable: false),
                     JoinDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
