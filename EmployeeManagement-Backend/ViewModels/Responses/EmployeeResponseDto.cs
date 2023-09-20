@@ -2,6 +2,7 @@ namespace EmployeeManagement_Backend.ViewModels.Responses;
 
 public class EmployeeResponseDto
 {
+    public string? TrId { get; set; }
     public string Id { get; set; }
     public string IdentityNumber { get; set; }
     public string Name { get; set; }

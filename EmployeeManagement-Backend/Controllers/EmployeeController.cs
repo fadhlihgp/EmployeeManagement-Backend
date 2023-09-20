@@ -45,6 +45,17 @@ public class EmployeeController : ControllerBase
         });
     }
 
+    [HttpGet("tr/{projectId}")]
+    public async Task<IActionResult> ListEmployeeByProjectId([FromRoute] string projectId)
+    {
+        return Ok(new SuccessResponseDto
+        {
+            StatusCode = 200,
+            Message = DataProperties.SuccessGetMessage,
+            Data = await _employeeService.ListEmployeeByProjectId(projectId)
+        });
+    }
+    
     [HttpGet("{employeeId}")]
     public async Task<IActionResult> GetEmployeeById([FromRoute] string employeeId)
     {

@@ -100,3 +100,5 @@ D:\UpSkill\.Net\Api Portofolio\EmployeeManagement-Backend\EmployeeManagement-Bac
 D:\UpSkill\.Net\Api Portofolio\EmployeeManagement-Backend\EmployeeManagement-Backend\obj\Debug\net7.0\EmployeeManagement-Backend.pdb
 D:\UpSkill\.Net\Api Portofolio\EmployeeManagement-Backend\EmployeeManagement-Backend\obj\Debug\net7.0\EmployeeManagement-Backend.genruntimeconfig.cache
 D:\UpSkill\.Net\Api Portofolio\EmployeeManagement-Backend\EmployeeManagement-Backend\obj\Debug\net7.0\ref\EmployeeManagement-Backend.dll
+D:\UpSkill\.Net\Api Portofolio\EmployeeManagement-Backend\EmployeeManagement-Backend\bin\Debug\net7.0\CloudinaryDotNet.dll
+D:\UpSkill\.Net\Api Portofolio\EmployeeManagement-Backend\EmployeeManagement-Backend\bin\Debug\net7.0\Newtonsoft.Json.dll

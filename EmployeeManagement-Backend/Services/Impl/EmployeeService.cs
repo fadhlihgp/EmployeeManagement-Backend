@@ -24,7 +24,7 @@ public class EmployeeService : IEmployeeService
     public async Task CreateEmployee(string companyId, EmployeeCreateRequestDto createRequestDto)
     {
         var employeeIdentity = await _employeeRepository.Find(e =>
-            e.IdentityNumber.Equals(createRequestDto.IdentityNumber) && e.CompanyId.Equals(companyId));
+            e.IdentityNumber.Equals(createRequestDto.IdentityNumber) && e.CompanyId.Equals(companyId) && !e.IsDeleted);
         if (employeeIdentity != null) throw new BadRequestException("Terdapat duplikat nomor pokok karyawan");
         
         var employeeSave = new Employee
@@ -58,7 +58,7 @@ public class EmployeeService : IEmployeeService
     public async Task<IEnumerable<EmployeeResponseDto>> ListEmployee(string companyId)
     {
         var employees =
-            await _employeeRepository.FindAll(e => e.CompanyId.Equals(companyId) && e.IsDeleted.Equals(false));
+            await _employeeRepository.FindAll(e => e.CompanyId.Equals(companyId) && !e.IsDeleted);
 
         IEnumerable<EmployeeResponseDto> results = employees.Select(e => new EmployeeResponseDto
         {
@@ -77,10 +77,29 @@ public class EmployeeService : IEmployeeService
         return results;
     }
 
+    public async Task<IEnumerable<EmployeeResponseDto>>? ListEmployeeByProjectId(string projectId)
+    {
+        var employees = await _trEmployeeProjectRepository
+            .FindAll(tr => tr.ProjectId.Equals(projectId) && !tr.Employee.IsDeleted, new []{"Employee"});
+        IEnumerable<EmployeeResponseDto>? results = employees.Select(tr => new EmployeeResponseDto
+        {
+            TrId = tr.Id,
+            Id = tr.Employee.Id,
+            IdentityNumber = tr.Employee.IdentityNumber,
+            Name = tr.Employee.Name,
+            Address = tr.Employee.Address,
+            PhoneNumber = tr.Employee.PhoneNumber,
+            BirthDate = tr.Employee.BirthDate,
+            ImageUrl = tr.Employee.ImageUrl,
+            IsActive = tr.Employee.IsActive,
+            JoinDate = tr.Employee.JoinDate,
+        });
+        return results;
+    }
     // ======================== Find employee detail with project details ========================
     public async Task<EmployeeResponseDto> GetEmployeeById(string employeeId)
     {
-        var employee = await _employeeRepository.Find(e => e.Id.Equals(employeeId) && e.IsDeleted);
+        var employee = await _employeeRepository.Find(e => e.Id.Equals(employeeId) && !e.IsDeleted);
         if (employee == null) throw new NotFoundException(DataProperties.NotFoundMessage);
         
         var trEmpProjects = await _trEmployeeProjectRepository.FindAll(tr => tr.EmployeeId.Equals(employeeId),
@@ -160,7 +179,7 @@ public class EmployeeService : IEmployeeService
         var employee = await _employeeRepository.FindById(employeeId);
         if (employee == null) throw new NotFoundException(DataProperties.NotFoundMessage);
 
-        employee.IsDeleted = false;
+        employee.IsDeleted = true;
         _employeeRepository.Update(employee);
         await _persistence.SaveChangesAsync();
 
