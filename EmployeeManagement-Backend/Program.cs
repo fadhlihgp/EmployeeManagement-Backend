@@ -60,6 +60,8 @@ builder.Services.AddTransient<IAuthService, AuthService>();
 builder.Services.AddTransient<ILoginHistoryService, LoginHistoryService>();
 builder.Services.AddTransient<IAccountService, AccountService>();
 builder.Services.AddTransient<ICompanyService, CompanyService>();
+builder.Services.AddTransient<IProjectStatusService, ProjectStatusService>();
+builder.Services.AddTransient<IAttendanceCodeService, AttendanceCodeService>();
 #endregion
 
 // Middleware
