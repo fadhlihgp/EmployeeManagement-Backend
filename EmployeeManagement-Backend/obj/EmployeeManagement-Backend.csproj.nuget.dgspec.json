@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\UpSkill\\.Net\\Api Portofolio\\EmployeeManagement-Backend\\EmployeeManagement-Backend\\EmployeeManagement-Backend.csproj": {}
+    "C:\\Fadhlih\\Private\\Project\\EmployeeManagement-Fullstack\\EmployeeManagement-Backend\\EmployeeManagement-Backend\\EmployeeManagement-Backend.csproj": {}
   },
   "projects": {
-    "D:\\UpSkill\\.Net\\Api Portofolio\\EmployeeManagement-Backend\\EmployeeManagement-Backend\\EmployeeManagement-Backend.csproj": {
+    "C:\\Fadhlih\\Private\\Project\\EmployeeManagement-Fullstack\\EmployeeManagement-Backend\\EmployeeManagement-Backend\\EmployeeManagement-Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\UpSkill\\.Net\\Api Portofolio\\EmployeeManagement-Backend\\EmployeeManagement-Backend\\EmployeeManagement-Backend.csproj",
+        "projectUniqueName": "C:\\Fadhlih\\Private\\Project\\EmployeeManagement-Fullstack\\EmployeeManagement-Backend\\EmployeeManagement-Backend\\EmployeeManagement-Backend.csproj",
         "projectName": "EmployeeManagement-Backend",
-        "projectPath": "D:\\UpSkill\\.Net\\Api Portofolio\\EmployeeManagement-Backend\\EmployeeManagement-Backend\\EmployeeManagement-Backend.csproj",
-        "packagesPath": "C:\\Users\\fadhl\\.nuget\\packages\\",
-        "outputPath": "D:\\UpSkill\\.Net\\Api Portofolio\\EmployeeManagement-Backend\\EmployeeManagement-Backend\\obj\\",
+        "projectPath": "C:\\Fadhlih\\Private\\Project\\EmployeeManagement-Fullstack\\EmployeeManagement-Backend\\EmployeeManagement-Backend\\EmployeeManagement-Backend.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Fadhlih\\Private\\Project\\EmployeeManagement-Fullstack\\EmployeeManagement-Backend\\EmployeeManagement-Backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\fadhl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -100,7 +101,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
